@@ -12,14 +12,22 @@ mkdir -p /home/$username/.tmux
 
 cp -R .config/* /home/$username/.config/
 cp -R .tmux/* /home/$username/.tmux/
+cp -R fonts/opentype/* /usr/share/fonts/opentype/
+cp -R fonts/truetype/* /usr/share/fonts/truetype/
+
 sudo mv  Mangalore.jpg /usr/share/backgrounds/
 
-sudo nala install -y  feh kitty i3 picom unzip wget blueman curl
-sudo nala install -y neofetch autorandr light fonts-font-awesome -y
+sudo nala install -y  feh i3 i3blocks picom unzip wget blueman curl fzf 
+sudo nala install -y neofetch autorandr light fonts-font-awesome 
 sudo nala install -y vlc simplescreenrecorder alacritty
 
+mv key-bindings.bash /usr/share/doc/fzf/examples/
+
+sudo wget https://github.com/Martichou/rquickshare/releases/download/v0.7.1/r-quick-share_0.7.1_amd64.deb
+sudo nala install -y ./r-quick-share_0.7.1_amd64.deb
+
 sudo nala install software-properties-common
-sudo mv config /home$username/.config/i3/
+sudo mv config /home/$username/.config/i3/
 
 sudo apt-get install  gpg
 sudo nala install -y flatpak filelight gnome-software-plugin-flatpak
@@ -38,7 +46,3 @@ cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
 
 fc-cache -vf
-
-
-
-
