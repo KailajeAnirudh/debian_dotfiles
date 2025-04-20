@@ -20,7 +20,15 @@ sudo mv  Mangalore.jpg /usr/share/backgrounds/
 sudo nala install -y  feh i3 i3blocks picom unzip wget blueman curl fzf 
 sudo nala install -y neofetch autorandr light fonts-font-awesome 
 sudo nala install -y vlc simplescreenrecorder alacritty
+sudo nala install curl htop 
 
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+sudo apt update
+
+sudo nala install brave-browser
 mv key-bindings.bash /usr/share/doc/fzf/examples/
 
 sudo wget https://github.com/Martichou/rquickshare/releases/download/v0.7.1/r-quick-share_0.7.1_amd64.deb
@@ -38,9 +46,8 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 sudo flatpak install -y flathub com.discordapp.Discord
 sudo flatpak install -y flathub com.slack.Slack
 sudo flatpak install -y flathub com.tencent.WeChat
-sudo flatpak install -y flathub com.brave.Browser
 sudo flatpak install -y flathub com.logseq.Logseq
-sudo flatpak install -y flathub com.visualstudio.code
+
 git clone https://github.com/AdnanHodzic/auto-cpufreq.git
 cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
