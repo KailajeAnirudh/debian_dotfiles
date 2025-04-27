@@ -20,7 +20,7 @@ sudo mv  Mangalore.jpg /usr/share/backgrounds/
 sudo nala install -y  feh i3 i3blocks picom unzip wget blueman curl fzf 
 sudo nala install -y neofetch autorandr light fonts-font-awesome 
 sudo nala install -y vlc simplescreenrecorder alacritty
-sudo nala install curl htop 
+sudo nala install curl htop gimp pavucontrol htop
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
