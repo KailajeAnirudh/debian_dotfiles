@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "Default High Contrast",
+    "editor.lineNumbers": "relative",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<esc>"]
+        }
+    ]
+}

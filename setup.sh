@@ -53,3 +53,4 @@ cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
 
 fc-cache -vf
+sudo cp settings.json ~/.config/Code/User/
