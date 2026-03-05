@@ -1,6 +1,6 @@
 sudo apt update 
 sudo apt install -y nala
-sudo nala update && sudo nala upgrade
+sudo nala update && sudo nala upgrade -y
 
 username=$(id -u -n 1000)
 builddir=$(pwd)
@@ -20,7 +20,7 @@ sudo mv  Mangalore.jpg /usr/share/backgrounds/
 sudo nala install -y  feh i3 i3blocks picom unzip wget blueman curl fzf 
 sudo nala install -y neofetch autorandr light fonts-font-awesome 
 sudo nala install -y vlc simplescreenrecorder alacritty
-sudo nala install curl htop gimp pavucontrol htop
+sudo nala install -y curl htop gimp pavucontrol htop arandr gedit
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
@@ -54,3 +54,8 @@ cd auto-cpufreq && sudo ./auto-cpufreq-installer
 
 fc-cache -vf
 sudo cp settings.json ~/.config/Code/User/
+
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'   
+
+
