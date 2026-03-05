@@ -1,4 +1,5 @@
-sudo apt update 
+sudo add-apt-repository ppa:kicad/kicad-9.0-releases
+sudo apt update
 sudo apt install -y nala
 sudo nala update && sudo nala upgrade -y
 
@@ -9,18 +10,20 @@ cd $builddir
 
 mkdir -p /home/$username/.config
 mkdir -p /home/$username/.tmux
+mkdir -p /home/$username/.screenlayout
 
-cp -R .config/* /home/$username/.config/
+sudo cp -R .config/* /home/$username/.config/
 cp -R .tmux/* /home/$username/.tmux/
 cp -R fonts/opentype/* /usr/share/fonts/opentype/
 cp -R fonts/truetype/* /usr/share/fonts/truetype/
+cp -R .screenlayout/* /home/$username/.screenlayout/
 
 sudo mv  Mangalore.jpg /usr/share/backgrounds/
 
 sudo nala install -y  feh i3 i3blocks picom unzip wget blueman curl fzf 
 sudo nala install -y neofetch autorandr light fonts-font-awesome 
 sudo nala install -y vlc simplescreenrecorder alacritty
-sudo nala install -y curl htop gimp pavucontrol htop arandr gedit
+sudo nala install -y curl htop gimp pavucontrol htop arandr gedit kicad
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
